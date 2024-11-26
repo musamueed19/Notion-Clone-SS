@@ -1,3 +1,4 @@
+'use client'
 
 import {
   Sheet,
@@ -27,7 +28,7 @@ const Sidebar = () => {
     );
 
   return (
-    <div className="p-2 md:p-5 bg-gray-200 relative">
+    <div className="p-2 md:p-5 bg-gray-200 w-[12vw] relative">
       {/* Mobile Nav */}
       <div className="md:hidden">
         <Sheet>
@@ -44,7 +45,7 @@ const Sidebar = () => {
         </Sheet>
       </div>
       {/* Nav */}
-      <div className="hidden md:inline"> {menuOptions}</div>
+      <div className="hidden md:flex flex-col items-center"> {menuOptions}</div>
     </div>
   );
 }
