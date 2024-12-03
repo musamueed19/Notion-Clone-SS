@@ -65,3 +65,8 @@
   }
 }
 
+
+body {
+  overflow-y: hidden;
+}
+

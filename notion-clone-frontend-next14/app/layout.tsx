@@ -21,14 +21,14 @@ export default function RootLayout({
           {/* Header Section */}
           <Header />
 
-          <div className="flex min-h-screen">
+          <div className="flex min-h-screen overflow-y-scroll scrollbar-thin">
             {/* Sidebar Section */}
             <div>
               <Sidebar />
             </div>
 
             {/* Main Body - Section */}
-            <div className="flex-1 bg-gray-100 overflow-y-auto scrollbar-hide">{children}</div>
+            <div className="flex-1 bg-gray-100 overflow-y-scroll scrollbar-thin">{children}</div>
           </div>
         </body>
       </html>
