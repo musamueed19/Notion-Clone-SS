@@ -100,7 +100,11 @@ const Sidebar = () => {
           <>
             <h2 className="text-gray-500 font-semibold text-sm">Documents</h2>
             {groupedData.owner.map((doc) => (
-              <SidebarOptions key={doc.id} href={`/doc/${doc.id}`} id={doc.id} />
+              <SidebarOptions
+                key={doc.id}
+                href={`/doc/${doc.id}`}
+                id={doc.id}
+              />
             ))}
           </>
         )}
@@ -108,12 +112,20 @@ const Sidebar = () => {
 
       {/* Shared with me */}
       {/* Lists */}
+      {groupedData.editor.length > 0 && (
+        <>
+          <h2 className="text-gray-500 font-semibold text-sm">Shared Documents</h2>
+          {groupedData.editor.map((doc) => (
+            <SidebarOptions key={doc.id} href={`/doc/${doc.id}`} id={doc.id} />
+          ))}
+        </>
+      )}
     </>
   );
 
   return (
     // md:w-[25vw] lg:w-[18vw] xl:w-[14vw]
-    <div className="md:w-[12vw] lg:justify-center flex md:py-8 px-4 justify-start bg-gray-200 h-full relative">
+    <div className="lg:justify-center flex md:py-8 px-4 justify-start bg-gray-200 h-full relative">
       {/* Mobile Sidebar - Section */}
       <div className="md:hidden">
         <Sheet>
