@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = () => {
     let { user } = useUser();
   return (
-    <div className="h-[8vh]">
+    <div className="h-[8vh] bg-[#242424] text-white">
       <div className="w-[90%] md:w-[90%] h-full flex justify-between items-center mx-auto">
         {/* Logo or User Title */}
         <Link href="/" className="font-bold text-xl md:text-2xl">
