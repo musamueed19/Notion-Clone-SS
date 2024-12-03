@@ -5,7 +5,7 @@ import { auth } from "@clerk/nextjs/server"
 
 export async function createNewDocument() {
 
-    auth.protect();
+    // auth();
 
     const { sessionClaims } = await auth();
 

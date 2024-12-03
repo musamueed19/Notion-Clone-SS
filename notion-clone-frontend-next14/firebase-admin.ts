@@ -1,7 +1,8 @@
 import { initializeApp, App, cert, getApps, getApp } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
-const serviceKey = (process.env.FIREBASE_SERVICE_KEY || "{}");
+// Parse the FIREBASE_SERVICE_KEY environment variable as a JSON object
+const serviceKey = JSON.parse(process.env.FIREBASE_SERVICE_KEY || "{}");
 
 let app: App;
 
